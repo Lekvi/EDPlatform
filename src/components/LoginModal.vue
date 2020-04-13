@@ -36,3 +36,19 @@ export default {
   name: "login"
 };
 </script>
+<style lang="less" scoped>
+   .input-field input[type=text]:focus + label {
+    color: #448AFF;
+  }
+  .input-field input[type=password]:focus + label {
+    color: #448AFF;
+  }
+    .input-field input[type=text]:focus {
+    border-bottom: 1px solid #448AFF;
+    box-shadow: 0 1px 0 0 #448AFF;
+  }
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #448AFF;
+    box-shadow: 0 1px 0 0 #448AFF;
+  }
+</style>
