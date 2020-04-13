@@ -3,20 +3,12 @@
     <div class="card-content">
       <span class="card-title">Вход в систему</span>
       <div class="input-field">
-        <input
-            id="email"
-            type="text"
-            class="validate"
-        >
+        <input id="email" type="text" class="validate" />
         <label for="email">Email</label>
         <small class="helper-text invalid">Email</small>
       </div>
       <div class="input-field">
-        <input
-            id="password"
-            type="password"
-            class="validate"
-        >
+        <input id="password" type="password" class="validate" />
         <label for="password">Пароль</label>
         <small class="helper-text invalid">Password</small>
       </div>
@@ -24,8 +16,8 @@
     <div class="card-action">
       <div>
         <button
-            class="btn waves-effect waves-light blue accent-2 auth-submit"
-            type="submit"
+          class="btn waves-effect waves-light blue accent-2 auth-submit"
+          type="submit"
         >
           Войти в систему
         </button>
@@ -39,8 +31,8 @@
   </form>
 </template>
 
-<style lang="less" scoped>
-  .active {
-    color: red;
-  }
-</style>
+<script>
+export default {
+  name: "login"
+};
+</script>
