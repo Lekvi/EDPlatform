@@ -43,9 +43,10 @@
 
 <script>
 export default {
-  name: "login"
+  name: "authorization"
 };
 </script>
+
 <style lang="less" scoped>
    .input-field input[type=password]:focus + label,
    .input-field input[type=email]:focus + label,
@@ -56,5 +57,13 @@ export default {
     .input-field input[type=email]:focus {
     border-bottom: 1px solid #448AFF;
     box-shadow: 0 1px 0 0 #448AFF;
+  }
+  p a {
+    color: #448AFF !important;
+    font-weight: 500 !important;
+  }
+  p a:hover {
+    color: #4B5CD7 !important;
+    font-weight: 500 !important;
   }
 </style>

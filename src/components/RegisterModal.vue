@@ -1,32 +1,42 @@
 <template>
-    <form class="card auth-card">
+  <form class="card auth-card">
     <div class="card-content">
-      <span class="card-title">Домашняя бухгалтерия</span>
+      <span class="card-title">Регистрация</span>
       <div class="input-field">
-        <input
-            id="email"
-            type="text"
-        >
-        <label for="email">Email</label>
-        <small class="helper-text invalid">Email</small>
-      </div>
-      <div class="input-field">
-        <input
-            id="password"
-            type="password"
-            class="validate"
-        >
-        <label for="password">Пароль</label>
-        <small class="helper-text invalid">Password</small>
-      </div>
-      <div class="input-field">
+        <i class="material-icons prefix">person</i>
         <input
             id="name"
             type="text"
             class="validate"
         >
         <label for="name">Имя</label>
-        <small class="helper-text invalid">Name</small>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">people</i>
+        <input
+            id="surname"
+            type="text"
+            class="validate"
+        >
+        <label for="name">Фамилия</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">email</i>
+        <input
+            id="email"
+            type="email"
+        >
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input
+            id="password"
+            type="password"
+            class="validate"
+        >
+        <label for="password">Пароль</label>
+        
       </div>
       <p>
         <label>
@@ -38,7 +48,7 @@
     <div class="card-action">
       <div>
         <button
-            class="btn waves-effect waves-light auth-submit"
+            class="btn waves-effect blue waves-light auth-submit"
             type="submit"
         >
           Зарегистрироваться
@@ -59,3 +69,28 @@ export default {
   name: "registration"
 };
 </script>
+
+<style lang="less" scoped>
+   .input-field input[type=text]:focus + label, 
+   .input-field input[type=password]:focus + label,
+   .input-field input[type=email]:focus + label,
+   .input-field .prefix.active {
+    color: #448AFF;
+  }
+    .input-field input[type=text]:focus,
+    .input-field input[type=password]:focus,
+    .input-field input[type=email]:focus {
+    border-bottom: 1px solid #448AFF;
+    box-shadow: 0 1px 0 0 #448AFF;
+  }
+  p a {
+    color: #448AFF !important;
+    font-weight: 500 !important;
+  }
+  p a:hover {
+    color: #4B5CD7 !important;
+    font-weight: 500 !important;
+  }
+
+</style>
+
