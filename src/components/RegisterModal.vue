@@ -48,7 +48,7 @@
 
       <p class="center">
         Уже есть аккаунт?
-        <a href="/">Войти!</a>
+        <a href="/authorization">Войти!</a>
       </p>
     </div>
   </form>

@@ -25,7 +25,7 @@
 
       <p class="center">
         Нет аккаунта?
-        <a href="/">Зарегистрироваться</a>
+        <a href="/registration">Зарегистрироваться</a>
       </p>
     </div>
   </form>
@@ -37,13 +37,13 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-   .input-field input[type=text]:focus + label {
+  .input-field input[type=text]:focus + label {
     color: #448AFF;
   }
   .input-field input[type=password]:focus + label {
     color: #448AFF;
   }
-    .input-field input[type=text]:focus {
+  .input-field input[type=text]:focus {
     border-bottom: 1px solid #448AFF;
     box-shadow: 0 1px 0 0 #448AFF;
   }
