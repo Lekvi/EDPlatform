@@ -1,27 +1,14 @@
 <template>
   <div id="app">
-    <component :is="layout">
-      <router-view />
-    </component>
+    <router-view />
   </div>
 </template>
 
 <script>
-import AuthLayout from '@/layouts/AuthLayout'
-import MainLayout from '@/layouts/MainLayout'
-export default {
-  computed: {
-    layout() {
-      return 'auth-layout'
-    }
-  },
-  components: {
-    AuthLayout, MainLayout
-  }
-}
+export default {};
 </script>
 
 <style lang="less">
-@import '~materialize-css/dist/css/materialize.min.css';
-@import 'assets/index.css';
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "assets/index.css";
 </style>

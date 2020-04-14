@@ -1,5 +1,5 @@
 <template>
-  <form class="card auth-card">
+    <form class="card auth-card">
     <div class="card-content">
       <span class="card-title">Домашняя бухгалтерия</span>
       <div class="input-field">
@@ -48,8 +48,14 @@
 
       <p class="center">
         Уже есть аккаунт?
-        <a href="/">Войти!</a>
+        <a href="/authorization">Войти!</a>
       </p>
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  name: "registration"
+};
+</script>
