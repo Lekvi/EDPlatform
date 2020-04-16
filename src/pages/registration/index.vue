@@ -1,9 +1,9 @@
 <template>
-  <Registration/>
+  <Registration />
 </template>
 
 <script>
-import Registration from '@/components/RegisterModal.vue'
+import Registration from "@/components/RegisterModal.vue";
 
 export default {
   layout: "AuthLayout",
@@ -13,5 +13,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

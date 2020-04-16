@@ -1,13 +1,14 @@
 <template>
-  <Login />
+  <User />
 </template>
 
 <script>
-import Login from "@/components/LoginModal.vue";
+import User from "@/components/User.vue";
+
 export default {
-  layout: "AuthLayout",
+  layout: "MainLayout",
   components: {
-    Login
+    User
   }
 };
 </script>
