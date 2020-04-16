@@ -3,5 +3,6 @@ module.exports = {
     autoRouting: {
       chunkNamePrefix: "page-"
     }
-  }
+  },
+  lintOnSave: false
 };
