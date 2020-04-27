@@ -1,17 +1,18 @@
 <template>
   <nav class="navbar orange lighten-1">
     <div class="nav-wrapper">
-      <div class="navbar-left"></div>
-
-      <ul class="right hide-on-small-and-down">
-        <li>
+      <img src="#" class="logo" alt="logo" />
+      <ul class="navbar-content black-text">
+        <li><a class="black-text" href="#">ЕГЭ</a></li>
+        <li><a class="black-text" href="#">ОГЭ</a></li>
+        <li class="dropdown">
           <a
             class="dropdown-trigger black-text"
             href="#"
             data-target="dropdown"
             ref="dropdown"
           >
-            USER NAME
+            <span>Войти</span>
             <i class="material-icons right">arrow_drop_down</i>
           </a>
           <ul id="dropdown" class="dropdown-content">
@@ -20,7 +21,6 @@
                 <i class="material-icons">account_circle</i>Профиль
               </a>
             </li>
-            <li class="divider" tabindex="-1"></li>
             <li>
               <a href="#" class="black-text" @click.prevent="logout">
                 <i class="material-icons">assignment_return</i>Выйти
@@ -32,6 +32,30 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-content {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-content {
+  top: -65px;
+  left: -30px;
+}
+
+.dropdown {
+  margin-left: auto;
+}
+</style>
 
 <script>
 export default {
