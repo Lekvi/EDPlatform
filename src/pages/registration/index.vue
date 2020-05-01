@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Registration from "@/components/RegisterModal.vue";
+import Registration from "@/components/RegisterModal";
 
 export default {
   layout: "AuthLayout",

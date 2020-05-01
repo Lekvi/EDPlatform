@@ -20,3 +20,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+templ/Record.vue
+templ/Detail.vue
+templ/History.vue
+templ/Planning.vue
+templ/Home.vue
+templ/Profile.vue
