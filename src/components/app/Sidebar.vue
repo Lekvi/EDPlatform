@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar col s2 z-depth-1">
+  <div class="sidebar col xl2 l2 m2 s2 z-depth-1">
     <ul class="sidebar-list black-text">
       <li><a href="#">Моя статистика</a></li>
       <li><a href="#">Мои рекомендации</a></li>
