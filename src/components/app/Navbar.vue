@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar blue lighten-1">
     <div class="nav-wrapper">
-      <img src="#" alt="logo">
+      <img class="logo" src="@/assets/img/logo.png" alt="logo">
       <ul class="navbar-content black-text">
         <li>
           <!-- <a href="#">ЕГЭ</a> -->
@@ -38,15 +38,12 @@ export default {
 </script>
 
 <style>
-.logo-box {
-  width: 100px;
-  height: 100px;
-}
 
 .logo {
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 50px;
 }
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
