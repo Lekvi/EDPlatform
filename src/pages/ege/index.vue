@@ -3,13 +3,9 @@
 </template>
 
 <script>
-//import User from "@/components/User";
 
 export default {
-  layout: "MainLayout",
-//   components: {
-//     User
-//   }
+  layout: "MainLayout"
 };
 </script>
 
