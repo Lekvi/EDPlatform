@@ -21,6 +21,7 @@ export default {
 <style scoped>
   .container {
      width: 85% !important;
+     max-width: 1500px !important;
      display: flex;
      margin-top: 100px;
   }
