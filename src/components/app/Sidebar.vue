@@ -20,6 +20,7 @@
           >Выйти</router-link
         >
       </li>
+      
     </ul>
   </div>
 </template>
@@ -90,7 +91,7 @@ export default {
   padding-left: 25px;
   margin-left: -32px;
   height: 45px;
-  min-width: 60px;
+  min-width: 235px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
