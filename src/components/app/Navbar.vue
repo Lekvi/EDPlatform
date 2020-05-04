@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar blue lighten-1">
     <div class="nav-wrapper">
-      <img class="logo" src="@/assets/img/logo.png" alt="logo">
+      <img class="logo" src="@/assets/images/logo.png" alt="logo">
       <ul class="navbar-content black-text">
         <li>
           <router-link to="/ege">ЕГЭ</router-link>
