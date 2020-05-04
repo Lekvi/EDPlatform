@@ -82,21 +82,6 @@ export default {
   color: black;
 }
 
-.comp-button {
-  padding: 6px 10px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  background: #f0f0f0;
-  margin-bottom: -1px;
-  margin-right: 12px;
-}
-
-.tab-button:hover {
-  background: #e0e0e0;
-}
-
 .active {
   border-left: 2px solid red;
 }
@@ -105,6 +90,7 @@ export default {
   padding-left: 25px;
   margin-left: -32px;
   height: 45px;
+  min-width: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
