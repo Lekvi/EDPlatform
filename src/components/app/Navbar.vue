@@ -1,9 +1,7 @@
 <template>
   <nav class="navbar blue lighten-1">
     <div class="nav-wrapper">
-      <router-link to="/">
-        <img class="logo" src="@/assets/images/logo.png" alt="logo">
-      </router-link>
+      <img class="logo" src="@/assets/img/logo.png" alt="logo">
       <ul class="navbar-content black-text">
         <li>
           <router-link to="/ege">ЕГЭ</router-link>
@@ -35,10 +33,12 @@ export default {
 </script>
 
 <style>
+
 .logo {
-  width: 170px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
 }
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;

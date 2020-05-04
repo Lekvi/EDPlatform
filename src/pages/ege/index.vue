@@ -4,10 +4,8 @@
 
 <script>
 
-
 export default {
-  layout: "MainLayout",
-
+  layout: "MainLayout"
 };
 </script>
 
