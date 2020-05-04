@@ -1,21 +1,18 @@
 <template>
   <nav class="navbar blue lighten-1">
     <div class="nav-wrapper">
-      <img src="#" alt="logo">
+      <router-link to="/">
+        <img class="logo" src="@/assets/images/logo.png" alt="logo">
+      </router-link>
       <ul class="navbar-content black-text">
         <li>
-          <!-- <a href="#">ЕГЭ</a> -->
           <router-link to="/ege">ЕГЭ</router-link>
         </li>
         <li>
-          <!-- <a href="#">ОГЭ</a> -->
           <router-link to="/oge">ОГЭ</router-link>
         </li>
             <li class="profile">
-              <!-- <a href="user">
-                Личный кабинет
-              </a> -->
-              <router-link class="white-text" to="/user" >Личный кабинет</router-link>
+              <router-link class="white-text" to="/user/statistics" >Личный кабинет</router-link>
             </li>
           </ul>
     </div>
@@ -38,21 +35,18 @@ export default {
 </script>
 
 <style>
-.logo-box {
-  width: 100px;
-  height: 100px;
-}
-
 .logo {
-  width: 100%;
-  height: 100%;
+  width: 170px;
+  height: 60px;
 }
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+.nav-wrapper a {
+  height: 60px;
+}
 .navbar-content {
   margin: auto;
   width: 85%;

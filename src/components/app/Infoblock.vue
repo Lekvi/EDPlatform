@@ -8,13 +8,13 @@
 export default {};
 </script>
 
-<style scoped>
+<style>
 .info-block {
   margin: 0 !important;
-  padding: 25px;
+  padding: 25px !important;
   margin: 0;
   border-radius: 10px;
-  min-height: 500px;
+  min-height: 500px !important;
   box-sizing: border-box;
 }
 .info-block-title {
