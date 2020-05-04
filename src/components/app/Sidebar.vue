@@ -10,11 +10,12 @@
         :to="link.url"
         exact
       >
-        <a @click="chooseLink">{{link.title}}</a>
+        <a @click="chooseLink" >{{link.title}}</a>
       </router-link>
       <li>
         <router-link class="black-text" to="/authorization" @click.prevent="logout">Выйти</router-link>
       </li>
+      
     </ul>
   </div>
 </template>
@@ -22,30 +23,28 @@
 <script>
 export default {
   name: "sidebar",
-  data: ()=> ({
-    links: [
+  data: function() {
+    return {
+      links: [
       {title: 'Моя статистика', url: '/user/statistics'},
-      {title: 'Мои рекомендации', url: '/user/recomendations'},
+      {title: 'Мои рекомендации', url: '/user/recomendations'}
     ],
-    currentTitle: '',
-  }),
-  // data: function() {
-  //   return {
-  //     links: [
-  //     {title: 'Моя статистика', url: '/user/statistics'},
-  //     {title: 'Мои рекомендации', url: '/user/recomendations'},
-  //   ],
-
-  //   }
-  // },
+    currentTitle: "",
+    
+    }
+  },
   methods: {
     async logout() {
       this.$store.dispatch("logout");
       this.$router.push("/authorization?message=logout");
     },
     chooseLink: function() {
+      console.log('test')
+      console.log(this.links)
+
+      //console.log(link.title)
       console.log(this.currentTitle)
-      this.$emit("showNewTitle", {currentTitle: this.link.title});
+      //this.$emit("showNewTitle", {currentTitle: this.link.title});
     }
   }
 };
