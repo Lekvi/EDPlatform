@@ -1,19 +1,24 @@
 <template>
   <div class="sidebar col xl2 l2 m2 s2 z-depth-1">
     <ul class="sidebar-list black-text">
-      <router-link 
+      <router-link
         v-for="link in links"
         :key="link.url"
-        class="black-text waves-effect" 
+        class="black-text waves-effect sidebar-li"
         tag="li"
         active-class="active"
         :to="link.url"
         exact
       >
-        <a @click="chooseLink">{{link.title}}</a>
+        <a @click="chooseLink">{{ link.title }}</a>
       </router-link>
-      <li>
-        <router-link class="black-text" to="/authorization" @click.prevent="logout">Выйти</router-link>
+      <li class="sidebar-li">
+        <router-link
+          class="black-text"
+          to="/authorization"
+          @click.prevent="logout"
+          >Выйти</router-link
+        >
       </li>
     </ul>
   </div>
@@ -22,12 +27,12 @@
 <script>
 export default {
   name: "sidebar",
-  data: ()=> ({
+  data: () => ({
     links: [
-      {title: 'Моя статистика', url: '/user/statistics'},
-      {title: 'Мои рекомендации', url: '/user/recomendations'},
+      { title: "Моя статистика", url: "/user/statistics" },
+      { title: "Мои рекомендации", url: "/user/recomendations" }
     ],
-    currentTitle: '',
+    currentTitle: ""
   }),
   // data: function() {
   //   return {
@@ -44,17 +49,16 @@ export default {
       this.$router.push("/authorization?message=logout");
     },
     chooseLink: function() {
-      console.log(this.currentTitle)
-      this.$emit("showNewTitle", {currentTitle: this.link.title});
+      console.log(this.currentTitle);
+      this.$emit("showNewTitle", { currentTitle: this.link.title });
     }
   }
 };
 </script>
 
-
 <style scoped>
 .sidebar {
-  margin: 0; 
+  margin: 0;
   border-radius: 10px;
   width: 200px;
   height: 200px;
@@ -66,7 +70,8 @@ export default {
   height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: left;
   padding: 10px 20px;
   box-sizing: border-box;
@@ -93,6 +98,15 @@ export default {
 }
 
 .active {
-  background: #e0e0e0;
+  border-left: 2px solid red;
+}
+
+.sidebar-li {
+  padding-left: 25px;
+  margin-left: -32px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 </style>
