@@ -130,6 +130,10 @@ export default {
   margin: 0;
 }
 
+.card:hover {
+  box-shadow: 0px 4px 15px #2196f3;
+}
+
 .first-test-button {
   width: 250px;
   height: 70px;
@@ -143,6 +147,7 @@ export default {
 
 .first-test-button:hover {
   width: 270px;
+  box-shadow: 0px 4px 15px #2196f3;
 }
 
 .card-icon {
