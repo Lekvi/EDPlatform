@@ -90,8 +90,8 @@ export default {
 .sidebar-li {
   padding-left: 25px;
   margin-left: -32px;
-  height: 45px;
-  width: 100%;
+  height: 50px;
+  width: 195px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
