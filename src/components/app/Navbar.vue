@@ -46,9 +46,11 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-wrapper a {
   height: 60px;
 }
+
 .navbar-content {
   margin: auto;
   width: 85%;

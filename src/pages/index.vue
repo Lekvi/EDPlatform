@@ -63,14 +63,10 @@
 </template>
 
 <script>
-import Infoblock from "@/components/app/Infoblock";
 
 export default {
   name: "home",
   layout: "MainLayout",
-  components: {
-    Infoblock
-  }
 };
 </script>
 

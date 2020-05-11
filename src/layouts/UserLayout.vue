@@ -3,7 +3,7 @@
     <Navbar />
     <div class="row container">
       <div class="info-block col xl9 l9 m9 s9 z-depth-1">
-        <h3 class="info-block-title black-text" >Изменяемый заголовок </h3>
+        <h3 class="info-block-title black-text" >Заголовок </h3>
         <router-view />    
       </div>
       <Sidebar />
@@ -14,6 +14,7 @@
 <script>
 import Navbar from "@/components/app/Navbar";
 import Sidebar from "@/components/app/Sidebar";
+import {mapGetters} from 'vuex'
 // import Infoblock from "@/components/app/Infoblock";
 // import Statistics from "@/components/Statistics";
 // import Recommendations from "@/components/Recommendations";
@@ -23,7 +24,14 @@ export default {
   components: { 
     Navbar,
     Sidebar
-  }
+  },
+  computed: {
+    getCurrentTitle() {
+      return this.$store.getters.getTitle
+      console.log('kfkf')
+    },
+  },
+  computed: mapGetters(['getTitle'])
 }
 
 </script>
