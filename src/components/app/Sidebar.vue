@@ -95,5 +95,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-size: 16px;
 }
 </style>
