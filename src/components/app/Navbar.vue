@@ -11,10 +11,10 @@
         <li>
           <router-link to="/oge">ОГЭ</router-link>
         </li>
-            <li class="profile">
-              <router-link class="white-text" to="/user/statistics" >Личный кабинет</router-link>
-            </li>
-          </ul>
+        <li class="profile">
+          <router-link class="white-text" to="/user/statistics" >Личный кабинет</router-link>
+        </li>
+      </ul>
     </div>
   </nav>
 </template>
@@ -46,9 +46,11 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-wrapper a {
   height: 60px;
 }
+
 .navbar-content {
   margin: auto;
   width: 85%;

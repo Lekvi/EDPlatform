@@ -17,8 +17,9 @@
           class="black-text"
           to="/authorization"
           @click.prevent="logout"
-          >Выйти</router-link
         >
+          Выйти
+        </router-link>
       </li>
       
     </ul>
@@ -50,8 +51,8 @@ export default {
       this.$router.push("/authorization?message=logout");
     },
     chooseLink: function() {
-      console.log(this.currentTitle);
-      this.$emit("showNewTitle", { currentTitle: this.link.title });
+      //console.log(this.currentTitle);
+      //this.$emit("showNewTitle", { currentTitle: this.link.title });
     }
   }
 };
