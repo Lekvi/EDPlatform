@@ -51,14 +51,16 @@
           </div>
         </div>
       </div>
-      <button
-        type="button"
-        class="first-test-button white-text z-depth-1 waves-effect waves-light"
-      >
-        Пройдите пробный тест
-      </button>
+      <router-link to="/testing">
+        <button
+          type="button"
+          class="first-test-button white-text z-depth-1 waves-effect waves-light"
+        >
+          Пройдите пробный тест
+        </button>
+      </router-link>
     </div>
-    <component v-bind:is="currentComponent"></component>
+    
   </div>
 </template>
 

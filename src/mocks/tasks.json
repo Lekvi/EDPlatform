@@ -1,0 +1,113 @@
+[
+    {
+        "taskname": "Название задания",
+        "taskDescriptions": "В этом задании надо сделать то то и то то",
+        "taskVariants": [
+            {
+                "variantDesctirpion": "1",
+                "isCorrest": false
+            },
+            {
+                "variantDesctirpion": "2",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "3",
+                "isCorrect": true
+            },
+            {
+                "variantDesctirpion": "4",
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "taskname": "Название задания",
+        "taskDescriptions": "В этом задании надо сделать то то и то то",
+        "taskVariants": [
+            {
+                "variantDesctirpion": "1",
+                "isCorrest": true
+            },
+            {
+                "variantDesctirpion": "2",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "3",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "4",
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "taskname": "Название задания",
+        "taskDescriptions": "В этом задании надо сделать то то и то то",
+        "taskVariants": [
+            {
+                "variantDesctirpion": "1",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "2",
+                "isCorrect": true
+            },
+            {
+                "variantDesctirpion": "3",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "4",
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "taskname": "Название задания",
+        "taskDescriptions": "В этом задании надо сделать то то и то то",
+        "taskVariants": [
+            {
+                "variantDesctirpion": "1",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "2",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "3",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "4",
+                "isCorrect": true
+            }
+        ] 
+    },
+    {
+        "taskname": "Название задания",
+        "taskDescriptions": "В этом задании надо сделать то то и то то",
+        "taskVariants": [
+            {
+                "variantDesctirpion": "1",
+                "isCorrect": true
+            },
+            {
+                "variantDesctirpion": "2",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "3",
+                "isCorrect": false
+            },
+            {
+                "variantDesctirpion": "4",
+                "isCorrect": false
+            }
+        ] 
+    },
+
+]
