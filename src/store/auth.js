@@ -5,8 +5,11 @@ export default {
     async login({ dispatch, commit }, { email, password }) {
       try {
         await firebase.auth().signInWithEmailAndPassword(email, password);
+        localStorage.setItem("isAuthenticated", true);
+        console.log('успешно')
       } catch (e) {
         commit("setError", e); // заглушка для последующей обработки ошибок
+        console.log('не успешно')
         throw e;
       }
     },
