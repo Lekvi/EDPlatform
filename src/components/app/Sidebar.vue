@@ -16,9 +16,9 @@
         <router-link
           class="black-text"
           to="/authorization"
-          @click.prevent="logout"
-          >Выйти</router-link
         >
+          <a @click.prevent="logout">Выйти</a>
+        </router-link>
       </li>
       
     </ul>
@@ -48,10 +48,15 @@ export default {
     async logout() {
       this.$store.dispatch("logout");
       this.$router.push("/authorization?message=logout");
+      console.log('Очистили')
+      localStorage.removeItem("isAuthenticated");
+      localStorage.setItem("isAuthenticated", false)
+      console.log(localStorage.getItem("isAuthenticated"));
     },
     chooseLink: function() {
-      console.log(this.currentTitle);
-      this.$emit("showNewTitle", { currentTitle: this.link.title });
+      console.log('dsd')
+      //console.log(this.currentTitle);
+      //this.$emit("showNewTitle", { currentTitle: this.link.title });
     }
   }
 };

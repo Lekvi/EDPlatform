@@ -15,7 +15,7 @@
           </div>
           <div class="card-text-block blue white-text">
             <p class="card-text">
-              Постоянно поплняемую базу с тестовыми занданиями по предмету ИКТ,
+              Постоянно пополняемую базу с тестовыми занданиями по предмету ИКТ,
               входящими в программу ЕГЭ и ОГЭ
             </p>
           </div>
@@ -51,26 +51,24 @@
           </div>
         </div>
       </div>
-      <button
-        type="button"
-        class="first-test-button white-text z-depth-1 waves-effect waves-light"
-      >
-        Пройдите пробный тест
-      </button>
+      <router-link to="/testing">
+        <button
+          type="button"
+          class="first-test-button white-text z-depth-1 waves-effect waves-light"
+        >
+          Пройдите пробный тест
+        </button>
+      </router-link>
     </div>
-    <component v-bind:is="currentComponent"></component>
+    
   </div>
 </template>
 
 <script>
-import Infoblock from "@/components/app/Infoblock";
 
 export default {
   name: "home",
   layout: "MainLayout",
-  components: {
-    Infoblock
-  }
 };
 </script>
 
