@@ -13,14 +13,10 @@
         <a @click="chooseLink">{{ link.title }}</a>
       </router-link>
       <li class="sidebar-li">
-        <router-link
-          class="black-text"
-          to="/authorization"
-        >
+        <router-link class="black-text" to="/authorization">
           <a @click.prevent="logout">Выйти</a>
         </router-link>
       </li>
-      
     </ul>
   </div>
 </template>
@@ -48,13 +44,13 @@ export default {
     async logout() {
       this.$store.dispatch("logout");
       this.$router.push("/authorization?message=logout");
-      console.log('Очистили')
+      console.log("Очистили");
       localStorage.removeItem("isAuthenticated");
-      localStorage.setItem("isAuthenticated", false)
+      localStorage.setItem("isAuthenticated", false);
       console.log(localStorage.getItem("isAuthenticated"));
     },
     chooseLink: function() {
-      console.log('dsd')
+      console.log("dsd");
       //console.log(this.currentTitle);
       //this.$emit("showNewTitle", { currentTitle: this.link.title });
     }
