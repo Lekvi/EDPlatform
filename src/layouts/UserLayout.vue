@@ -28,7 +28,7 @@ export default {
   computed: {
     getCurrentTitle() {
       return this.$store.getters.getTitle
-      console.log('kfkf')
+      
     },
   },
   computed: mapGetters(['getTitle'])

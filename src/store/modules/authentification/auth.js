@@ -1,12 +1,33 @@
 import firebase from "firebase/app";
 
 export default {
+  state: {
+    token: 0
+  },
+  getters: {
+    checkToken(state) {
+        return state.token
+    }
+  },
+  mutations: {
+    setActieveToken: (state) => {
+      state.token = 1
+      console.log('сработала мутация на 1')
+    },
+    setUnactiveToken: (state) => {
+      state.token = 0
+      console.log('сработала мутация на 0')
+    }
+  },
   actions: {
     async login({ dispatch, commit }, { email, password }) {
       try {
         await firebase.auth().signInWithEmailAndPassword(email, password);
-        localStorage.setItem("isAuthenticated", true);
+        //commit("setActieveToken");
+        
+        localStorage.setItem("isAuthenticated", 1);
         console.log('успешно')
+
       } catch (e) {
         commit("setError", e); // заглушка для последующей обработки ошибок
         console.log('не успешно')
@@ -35,6 +56,7 @@ export default {
     },
     async logout() {
       await firebase.auth().signOut();
+      //commit("setUnactiveToken");
     }
   }
 };

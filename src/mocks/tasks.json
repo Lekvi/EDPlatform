@@ -1,25 +1,8 @@
 [
     {
         "taskname": "Название задания",
-        "taskDescriptions": "В этом задании надо сделать то то и то то",
-        "taskVariants": [
-            {
-                "variantDesctirpion": "1",
-                "isCorrest": false
-            },
-            {
-                "variantDesctirpion": "2",
-                "isCorrect": false
-            },
-            {
-                "variantDesctirpion": "3",
-                "isCorrect": true
-            },
-            {
-                "variantDesctirpion": "4",
-                "isCorrect": false
-            }
-        ] 
+        "taskDescriptions": "В этом задании надо сделать то то и то то. А вопрос сколько будет 1+1?",
+        "correctAnswer": "Равнина"
     },
     {
         "taskname": "Название задания",
@@ -108,6 +91,5 @@
                 "isCorrect": false
             }
         ] 
-    },
-
+    }
 ]
