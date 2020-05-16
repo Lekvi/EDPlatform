@@ -50,7 +50,7 @@ export default {
       this.$router.push("/authorization?message=logout");
       console.log('Очистили')
       localStorage.removeItem("isAuthenticated");
-      localStorage.setItem("isAuthenticated", false)
+      localStorage.setItem("isAuthenticated", 0)
       console.log(localStorage.getItem("isAuthenticated"));
     },
     chooseLink: function() {

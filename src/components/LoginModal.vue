@@ -99,7 +99,8 @@ export default {
       };
       try {
         await this.$store.dispatch("login", formData);
-        this.$router.push("/");
+        console.log('Должны перейти к главную')
+        //this.$router.push("/");
       } catch (e) {}
     }
   }
