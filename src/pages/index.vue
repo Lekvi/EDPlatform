@@ -60,15 +60,13 @@
         </button>
       </router-link>
     </div>
-    
   </div>
 </template>
 
 <script>
-
 export default {
   name: "home",
-  layout: "MainLayout",
+  layout: "MainLayout"
 };
 </script>
 
