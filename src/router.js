@@ -28,28 +28,47 @@ const router = new Router({
 
 let isAuthenticated = localStorage.getItem('isAuthenticated')
 let Autentication = !!localStorage.getItem('isAuthenticated')
-console.log('Исходное состояние токена = ', isAuthenticated)
+console.log('Исходное состояние токена = ', Autentication)
+console.log('Исходное значение токена = ', isAuthenticated)
 console.log(isAuthenticated !== 1);
 
-router.beforeEach((to, from, next) => {
+// router.beforeEach((to, from, next) => {
 
-  if (to.path !== '/authorization' && isAuthenticated !== 1) {
+//   if (to.path !== '/authorization' && !Autentication  && isAuthenticated !== 1) {
 
-    console.log('Должен перейти к авторизации ', 'путь ' + to.path, isAuthenticated)
-    //console.log(store.getters.checkToken)
-    next('/authorization')
-    return;
+//     console.log('Должен перейти к авторизации ', 'путь ' + to.path, isAuthenticated)
+//     //console.log(store.getters.checkToken)
+//     next('/authorization')
+//     return;
     
-  } else {
+//   } else {
 
-    console.log('Авторизирован ', to.path, isAuthenticated)
-    //console.log(store.getters.checkToken)
-    //next('/user/recomendations')
-    next()
-    return;
+//     console.log('Авторизирован ', to.path, isAuthenticated)
+//     //console.log(store.getters.checkToken)
+//     //next('/user/recomendations')
+//     next()
+//     return;
 
-  }
-})
+//   }
+// })
+
+// router.beforeEach((to, from, next) => {
+
+//   if (Autentication  && isAuthenticated !== 1) {
+//     if(to.path !== '/authorization') {
+//       console.log('Пиздуй авторизовываться')
+//       next('/authorization')
+//       return;
+//     } else {
+//       console.log('Пиздуй куда хочешь')
+//         next();
+//         return;
+//     }
+//   } console.log('Токену пизда', !Autentication, isAuthenticated)
+
+
+// })
+
 
 export default router
 
