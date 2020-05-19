@@ -29,10 +29,12 @@
           class="submit-button btn btn-large blue waves-effect waves-light">
           Отправить
         </button>
-        <button
-          class="submit-button btn btn-large red waves-effect waves-light">
-          Отмена
-        </button>
+        <router-link to="/">
+          <button
+            class="submit-button btn btn-large red waves-effect waves-light">
+            Отмена
+          </button>
+        </router-link>
       </div>
   </div>
 </template>
