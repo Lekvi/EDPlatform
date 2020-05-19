@@ -1,14 +1,19 @@
 export default {
     state: {
-        currentTitle: 'TestTitle'
+        currentTitle: ''
     },
-    mutations: {},
+    mutations: {
+        setTitle: (state) => {
+            state.currentTitle = title;
+            console.log('сработала мутация на 1');
+        }
+    },
     actions: {},
     
     getters: {
         getTitle(state) {
-            return state.currentTitle,
-            console.log(state.currentTitle)
+            return state.currentTitle
+            //console.log(state.currentTitle)
         }
     },
 }

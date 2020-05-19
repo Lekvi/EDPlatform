@@ -26,14 +26,16 @@
     </div>
     <div class="buttons">
         <button
-          class="submit-button btn btn-large red waves-effect waves-light">
-          Отмена
-        </button>
-        <button
           @click="submitData"
           class="submit-button btn btn-large blue waves-effect waves-light">
           Отправить
         </button>
+        <router-link to="/">
+          <button
+            class="submit-button btn btn-large red waves-effect waves-light">
+            Отмена
+          </button>
+        </router-link>
       </div>
   </div>
 </template>

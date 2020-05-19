@@ -10,7 +10,7 @@
         :to="link.url"
         exact
       >
-        <a @click="chooseLink">{{ link.title }}</a>
+        <a @click="chooseLink(link.title)">{{ link.title }}</a>
       </router-link>
       <li class="sidebar-li">
         <router-link class="black-text" to="/authorization">
@@ -31,15 +31,6 @@ export default {
     ],
     currentTitle: ""
   }),
-  // data: function() {
-  //   return {
-  //     links: [
-  //     {title: 'Моя статистика', url: '/user/statistics'},
-  //     {title: 'Мои рекомендации', url: '/user/recomendations'},
-  //   ],
-
-  //   }
-  // },
   methods: {
     async logout() {
       this.$store.dispatch("logout");
@@ -49,10 +40,9 @@ export default {
       localStorage.setItem("isAuthenticated", 0)
       console.log(localStorage.getItem("isAuthenticated"));
     },
-    chooseLink: function() {
-      console.log("dsd");
-      //console.log(this.currentTitle);
-      //this.$emit("showNewTitle", { currentTitle: this.link.title });
+    chooseLink: function(title) {
+      this.$store.commit('setTitle');
+      //this.$emit("setTitle", { currentTitle: title });
     }
   }
 };

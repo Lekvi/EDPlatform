@@ -27,6 +27,7 @@ export default {
   },
   computed: {
     getCurrentTitle() {
+      console.log(this.$store.getters.getTitle)
       return this.$store.getters.getTitle
       
     },
