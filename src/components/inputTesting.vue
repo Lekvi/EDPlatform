@@ -3,11 +3,10 @@
     <h3 class="black-text center-align">Входное тестирование</h3>
 
     <div class="row" v-for="task in tasks" :key="task.taskAnwser" style="margin-left:15%; margin-right:15%;">
-      <div class="divider"></div>
       <div class="card ">
         <div class="card-content">
           <h4 class="card-title">
-            {{task.taskname}}
+            Задание №{{task.taskname}}
           </h4>
           <p class="card-content">        
             {{ task.taskDescriptions}}
