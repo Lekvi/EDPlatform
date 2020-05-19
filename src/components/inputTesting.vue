@@ -1,6 +1,7 @@
 <template>
   <div class="container card">
     <h3 class="black-text center-align">Входное тестирование</h3>
+
     <div class="row" v-for="task in tasks" :key="task.taskAnwser" style="margin-left:15%; margin-right:15%;">
       <div class="divider"></div>
       <div class="card ">
@@ -24,6 +25,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="buttons">
         <button
           @click="submitData"
@@ -82,11 +85,11 @@ export default {
 </script>
 
 <style>
-.container {
+ .container {
   padding: 30px 0;
   border-radius: 20px;
 }
-
+/*
 .content {
   display: flex;
   flex-direction: column;
@@ -96,6 +99,7 @@ export default {
   margin-right: auto;
   width: 800px;
 }
+
 .task-card {
   display: flex;
   flex-direction: column;
@@ -119,14 +123,14 @@ input:focus {
   height: 60px;
   border-radius: 20px;
 }
-
+*/
 .buttons {
-  /* width: 800px; */
+  /* width: 800px;  */
   display: flex;
   justify-content: space-around;
 }
 
 .title {
   margin-bottom: 30px;
-}
+} 
 </style>
