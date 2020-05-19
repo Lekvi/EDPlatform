@@ -1,9 +1,9 @@
 <template>
   <div class="container card">
     <h3 class="black-text center-align">Входное тестирование</h3>
-    <div class="row" v-for="task in tasks" :key="task.taskAnwser">
+    <div class="row" v-for="task in tasks" :key="task.taskAnwser" style="margin-left:15%; margin-right:15%;">
       <div class="divider"></div>
-      <div class="card col xl7 l7 m7 s7 center-align">
+      <div class="card ">
         <div class="card-content">
           <h4 class="card-title">
             <!-- Задание № 1 -->
@@ -24,6 +24,16 @@
         </div>
       </div>
     </div>
+    <div class="buttons">
+        <button
+          class="submit-button btn btn-large red waves-effect waves-light">
+          Отмена
+        </button>
+        <button
+          class="submit-button btn btn-large blue waves-effect waves-light">
+          Отправить
+        </button>
+      </div>
   </div>
 </template>
 
@@ -79,7 +89,7 @@ input:focus {
 }
 
 .buttons {
-  width: 800px;
+  /* width: 800px; */
   display: flex;
   justify-content: space-around;
 }
