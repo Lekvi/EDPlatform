@@ -2,7 +2,7 @@
   <div class="container card">
     <h3 class="black-text center-align">Входное тестирование</h3>
 
-    <div class="row" v-for="task in tasks" :key="task.taskAnwser" style="margin-left:15%; margin-right:15%;">
+    <div class="row" v-for="task in tasks" :key="task.taskAnswer" style="margin-left:15%; margin-right:15%;">
       <div class="divider"></div>
       <div class="card ">
         <div class="card-content">
@@ -59,7 +59,7 @@ export default {
           UserAnswer: '',
           taskDescriptions: item.taskDescriptions,
           taskname: item.taskname,
-          taskAnwser: item.taskAnwser
+          taskAnswer: item.taskAnwser
         }
       })
     },
@@ -68,7 +68,7 @@ export default {
       complitedTasks = this.tasks.map(function(task){
         return {
           taskname: task.taskname,
-          taskAnwser: task.taskAnwser,
+          taskAnswer: task.taskAnswer,
           UserAnswer: task.UserAnswer
         }
       });
