@@ -58,7 +58,7 @@ export default {
           UserAnswer: '',
           taskDescriptions: item.taskDescriptions,
           taskname: item.taskname,
-          taskAnwser: item.taskAnwser
+          taskAnswer: item.taskAnwser
         }
       })
     },
@@ -67,7 +67,7 @@ export default {
       complitedTasks = this.tasks.map(function(task){
         return {
           taskname: task.taskname,
-          taskAnwser: task.taskAnwser,
+          taskAnswer: task.taskAnswer,
           UserAnswer: task.UserAnswer
         }
       });
