@@ -1,95 +1,42 @@
 <template>
-  <div class="container white z-depth-1">
-    <h3 class="title black-text center-align">Входное тестирование</h3>
-    <div class="content">
-      <div class="task-card white z-depth-1">
-        <h4 class="task-title">Задание № 1</h4>
-        <p class="task-text">
-          Укажите количество целых десятичных чисел из диапазона от 10 до 20
-          включительно, имеющих в своей двоичной записи более двух единиц.
-        </p>
-        <form action="#">
-          <label>
-            <input name="group1" type="text" placeholder="Введите ответ" />
-          </label>
-        </form>
-      </div>
-      <div class="task-card white z-depth-1">
-        <h4 class="task-title">Задание № 1</h4>
-        <p class="task-text">
-          Укажите количество целых десятичных чисел из диапазона от 10 до 20
-          включительно, имеющих в своей двоичной записи более двух единиц.
-        </p>
-        <form action="#">
-          <label>
-            <input name="group1" type="text" placeholder="Введите ответ" />
-          </label>
-        </form>
-      </div>
-      <div class="task-card white z-depth-1">
-        <h4 class="task-title">Задание № 1</h4>
-        <p class="task-text">
-          Укажите количество целых десятичных чисел из диапазона от 10 до 20
-          включительно, имеющих в своей двоичной записи более двух единиц.
-        </p>
-        <form action="#">
-          <label>
-            <input name="group1" type="text" placeholder="Введите ответ" />
-          </label>
-        </form>
-      </div>
-      <div class="task-card white z-depth-1">
-        <h4 class="task-title">Задание № 1</h4>
-        <p class="task-text">
-          Укажите количество целых десятичных чисел из диапазона от 10 до 20
-          включительно, имеющих в своей двоичной записи более двух единиц.
-        </p>
-        <form action="#">
-          <label>
-            <input name="group1" type="text" placeholder="Введите ответ" />
-          </label>
-        </form>
-      </div>
-      <div class="task-card white z-depth-1">
-        <h4 class="task-title">Задание № 1</h4>
-        <p class="task-text">
-          Укажите количество целых десятичных чисел из диапазона от 10 до 20
-          включительно, имеющих в своей двоичной записи более двух единиц.
-        </p>
-        <form action="#">
-          <label>
-            <input name="group1" type="text" placeholder="Введите ответ" />
-          </label>
-        </form>
-      </div>
-      <div class="task-card white z-depth-1">
-        <h4 class="task-title">Задание № 1</h4>
-        <p class="task-text">
-          Укажите количество целых десятичных чисел из диапазона от 10 до 20
-          включительно, имеющих в своей двоичной записи более двух единиц.
-        </p>
-        <form action="#">
-          <label>
-            <input name="group1" type="text" placeholder="Введите ответ" />
-          </label>
-        </form>
-      </div>
-      <div class="buttons">
-        <button
-          class="submit-button btn btn-large blue waves-effect waves-light">
-          Отправить
-        </button>
-        <button
-          class="submit-button btn btn-large red waves-effect waves-light">
-          Отмена
-        </button>
+  <div class="container card">
+    <h3 class="black-text center-align">Входное тестирование</h3>
+    <div class="row" v-for="task in tasks" :key="task.taskAnwser">
+      <div class="divider"></div>
+      <div class="card col xl7 l7 m7 s7 center-align">
+        <div class="card-content">
+          <h4 class="card-title">
+            <!-- Задание № 1 -->
+            {{task.taskname}}
+          </h4>
+          <p class="card-content">
+            <!-- Укажите количество целых десятичных чисел из диапазона от 10 до 20
+            включительно, имеющих в своей двоичной записи более двух единиц. -->
+            {{ task.taskDescriptions}}
+          </p>
+          <form action="#">
+            <p>
+              <label>
+                <input name="group1" type="text" placeholder="Введите ответ"/>
+              </label>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import tasks from '../mocks/tasks.js';
+
+export default {
+  data: function(){
+    return {
+      tasks: tasks
+    }
+  }
+};
 </script>
 
 <style>
