@@ -17,7 +17,7 @@
           <form action="#">
             <p>
               <label>
-                <input name="group1" type="text" placeholder="Введите ответ"/>
+                <input name="group1" type="text" placeholder="Введите ответ" v-model="task.UserAnswer"/>
               </label>
             </p>
           </form>
@@ -30,6 +30,7 @@
           Отмена
         </button>
         <button
+          @click="submitData"
           class="submit-button btn btn-large blue waves-effect waves-light">
           Отправить
         </button>
@@ -39,11 +40,40 @@
 
 <script>
 import tasks from '../mocks/tasks.js';
+import AnswerStorage from '../AnswerStorage.js';
 
 export default {
   data: function(){
     return {
-      tasks: tasks
+      tasks: []
+    }
+  },
+  created: function(){
+    this.init();
+  },
+  methods: {
+    init: function(){
+      this.tasks = tasks.map(function(item){
+        return{
+          UserAnswer: '',
+          taskDescriptions: item.taskDescriptions,
+          taskname: item.taskname,
+          taskAnwser: item.taskAnwser
+        }
+      })
+    },
+    submitData: function(){
+      var complitedTasks = [];
+      complitedTasks = this.tasks.map(function(task){
+        return {
+          taskname: task.taskname,
+          taskAnwser: task.taskAnwser,
+          UserAnswer: task.UserAnswer
+        }
+      });
+      this.init();
+      
+      AnswerStorage.setAnswers(JSON.stringify(complitedTasks));
     }
   }
 };
