@@ -1,7 +1,9 @@
 <template>
   <div>
     <h2>Статистика</h2>
-    <pie-chart :data="chartData" :options="chartOptions"></pie-chart>
+    <div class="chartWrapper">
+      <pie-chart :data="chartData" :options="chartOptions"></pie-chart>
+    </div>
   </div>
 </template>
 
@@ -63,4 +65,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.chartWrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+</style>
