@@ -7,12 +7,9 @@
       <div class="card ">
         <div class="card-content">
           <h4 class="card-title">
-            <!-- Задание № 1 -->
             {{task.taskname}}
           </h4>
-          <p class="card-content">
-            <!-- Укажите количество целых десятичных чисел из диапазона от 10 до 20
-            включительно, имеющих в своей двоичной записи более двух единиц. -->
+          <p class="card-content">        
             {{ task.taskDescriptions}}
           </p>
           <form action="#">
@@ -25,7 +22,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="buttons">
         <button
