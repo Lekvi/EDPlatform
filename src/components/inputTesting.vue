@@ -26,12 +26,12 @@
     </div>
     <div class="buttons">
         <button
-          class="submit-button btn btn-large red waves-effect waves-light">
-          Отмена
-        </button>
-        <button
           class="submit-button btn btn-large blue waves-effect waves-light">
           Отправить
+        </button>
+        <button
+          class="submit-button btn btn-large red waves-effect waves-light">
+          Отмена
         </button>
       </div>
   </div>
