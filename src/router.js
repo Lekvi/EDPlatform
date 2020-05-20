@@ -26,31 +26,20 @@ const router = new Router({
   ]
 })
 
-let isAuthenticated = localStorage.getItem('isAuthenticated')
+var isAuthenticated = localStorage.getItem('isAuthenticated');
+
 let Autentication = !!localStorage.getItem('isAuthenticated')
 console.log('Исходное состояние токена = ', Autentication)
 console.log('Исходное значение токена = ', isAuthenticated)
 console.log(isAuthenticated !== 1);
 
-// router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
 
-//   if (to.path !== '/authorization' && !Autentication  && isAuthenticated !== 1) {
-
-//     console.log('Должен перейти к авторизации ', 'путь ' + to.path, isAuthenticated)
-//     //console.log(store.getters.checkToken)
-//     next('/authorization')
-//     return;
-    
-//   } else {
-
-//     console.log('Авторизирован ', to.path, isAuthenticated)
-//     //console.log(store.getters.checkToken)
-//     //next('/user/recomendations')
-//     next()
-//     return;
-
-//   }
-// })
+  
+  if (to.path !== '/authorization' && isAuthenticated != 1) next('/authorization')
+  else next()
+  
+})
 
 // router.beforeEach((to, from, next) => {
 

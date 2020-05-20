@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 
+
 export default {
   state: {
     token: 0
@@ -22,10 +23,11 @@ export default {
   actions: {
     async login({ dispatch, commit }, { email, password }) {
       try {
+        
         await firebase.auth().signInWithEmailAndPassword(email, password);
         //commit("setActieveToken");
-        
         localStorage.setItem("isAuthenticated", 1);
+        window.location.pathname = '/';
         console.log('успешно')
 
       } catch (e) {

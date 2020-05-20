@@ -100,7 +100,6 @@ export default {
       try {
         await this.$store.dispatch("login", formData);
         console.log('Должны перейти к главную')
-        //this.$router.push("/");
       } catch (e) {}
     }
   }

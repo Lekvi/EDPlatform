@@ -34,10 +34,10 @@ export default {
   methods: {
     async logout() {
       this.$store.dispatch("logout");
-      this.$router.push("/authorization?message=logout");
+      this.$router.push("/authorization");
       console.log("Очистили");
       localStorage.removeItem("isAuthenticated");
-      localStorage.setItem("isAuthenticated", 0)
+      // localStorage.setItem("isAuthenticated", 0)
       console.log(localStorage.getItem("isAuthenticated"));
     },
     chooseLink: function(title) {
