@@ -37,7 +37,8 @@ router.beforeEach((to, from, next) => {
 
   
   if (to.path !== '/authorization' && isAuthenticated != 1) next('/authorization')
-  else next()
+  else if (to.path == '/authorization' && isAuthenticated == 1 ){next('/')}
+  else next();
   
 })
 

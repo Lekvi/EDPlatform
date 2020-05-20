@@ -58,6 +58,7 @@ export default {
     },
     async logout() {
       await firebase.auth().signOut();
+      window.location.pathname = '/authorization';
       //commit("setUnactiveToken");
     }
   }

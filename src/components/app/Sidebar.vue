@@ -34,7 +34,7 @@ export default {
   methods: {
     async logout() {
       this.$store.dispatch("logout");
-      this.$router.push("/authorization");
+      // this.$router.push("/authorization");
       console.log("Очистили");
       localStorage.removeItem("isAuthenticated");
       // localStorage.setItem("isAuthenticated", 0)
