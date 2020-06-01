@@ -8,9 +8,8 @@
 </template>
 
 <script>
-import PieChart from "@/components/app/PieChart.js";
-import AnswerStorage from '../../../AnswerStorage.js';
-
+import PieChart from "@/assets/images/tasks/12-17-12.png";
+import AnswerStorage from "../../../AnswerStorage.js";
 
 export default {
   name: "personal",
@@ -34,35 +33,35 @@ export default {
           {
             label: "Data One",
             backgroundColor: ["#41B883", "#E46651", "#00D8FF"],
-            data: [0,0]
+            data: [0, 0]
           }
         ]
       }
     };
   },
-  created: function(){
-      this.init();
+  created: function() {
+    this.init();
   },
-  methods:{
-    init: function(){
+  methods: {
+    init: function() {
       console.log(AnswerStorage.getAnswers());
 
-      AnswerStorage.getAnswers().map(function(item){
-        if (item.UserAnswer == item.taskAnswer){
-          this.countTrueAnswers+=1;
-          console.log('countTrueAnswers ', this.countTrueAnswers)
-        }
-        else{
-          this.countFalseAnswers+=1;
-          console.log('countFalseAnswers ', this.countFalseAnswers)
-
-        }
-      }.bind(this));
+      AnswerStorage.getAnswers().map(
+        function(item) {
+          if (item.UserAnswer == item.taskAnswer) {
+            this.countTrueAnswers += 1;
+            console.log("countTrueAnswers ", this.countTrueAnswers);
+          } else {
+            this.countFalseAnswers += 1;
+            console.log("countFalseAnswers ", this.countFalseAnswers);
+          }
+        }.bind(this)
+      );
       this.chartData.datasets[0].data[0] = this.countTrueAnswers;
       this.chartData.datasets[0].data[1] = this.countFalseAnswers;
     }
   }
-}
+};
 </script>
 
 <style scoped>

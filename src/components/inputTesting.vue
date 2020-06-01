@@ -2,19 +2,27 @@
   <div class="container card">
     <h3 class="black-text center-align">Входное тестирование</h3>
 
-    <div class="row" v-for="task in tasks" :key="task.taskAnwser" style="margin-left:15%; margin-right:15%;">
+    <div
+      class="row"
+      v-for="task in tasks"
+      :key="task.taskAnwser"
+      style="margin-left:15%; margin-right:15%;"
+    >
       <div class="card ">
         <div class="card-content">
-          <h4 class="card-title">
-            Задание №{{task.taskname}}
-          </h4>
-          <p class="card-content">        
-            {{ task.taskDescriptions}}
+          <h4 class="card-title">Задание №{{ task.taskname }}</h4>
+          <p class="card-content">
+            {{ task.taskDescriptions }}
           </p>
           <form action="#">
             <p>
               <label>
-                <input name="group1" type="text" placeholder="Введите ответ" v-model="task.UserAnswer"/>
+                <input
+                  name="group1"
+                  type="text"
+                  placeholder="Введите ответ"
+                  v-model="task.UserAnswer"
+                />
               </label>
             </p>
           </form>
@@ -23,56 +31,58 @@
     </div>
 
     <div class="buttons">
+      <button
+        @click="submitData"
+        class="submit-button btn btn-large blue waves-effect waves-light"
+      >
+        Отправить
+      </button>
+      <router-link to="/">
         <button
-          @click="submitData"
-          class="submit-button btn btn-large blue waves-effect waves-light">
-          Отправить
+          class="submit-button btn btn-large red waves-effect waves-light"
+        >
+          Отмена
         </button>
-        <router-link to="/">
-          <button
-            class="submit-button btn btn-large red waves-effect waves-light">
-            Отмена
-          </button>
-        </router-link>
-      </div>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
-import tasks from '../mocks/tasks.js';
-import AnswerStorage from '../AnswerStorage.js';
+import tasks from "../mocks/tasks.js";
+import AnswerStorage from "../AnswerStorage.js";
 
 export default {
-  data: function(){
+  data: function() {
     return {
       tasks: []
-    }
+    };
   },
-  created: function(){
+  created: function() {
     this.init();
   },
   methods: {
-    init: function(){
-      this.tasks = tasks.map(function(item){
-        return{
-          UserAnswer: '',
+    init: function() {
+      this.tasks = tasks.map(function(item) {
+        return {
+          UserAnswer: "",
           taskDescriptions: item.taskDescriptions,
           taskname: item.taskname,
           taskAnswer: item.taskAnwser
-        }
-      })
+        };
+      });
     },
-    submitData: function(){
+    submitData: function() {
       var complitedTasks = [];
-      complitedTasks = this.tasks.map(function(task){
+      complitedTasks = this.tasks.map(function(task) {
         return {
           taskname: task.taskname,
           taskAnswer: task.taskAnswer,
           UserAnswer: task.UserAnswer
-        }
+        };
       });
       this.init();
-      
+
       AnswerStorage.setAnswers(JSON.stringify(complitedTasks));
     }
   }
@@ -80,7 +90,7 @@ export default {
 </script>
 
 <style>
- .container {
+.container {
   padding: 30px 0;
   border-radius: 20px;
 }
@@ -127,5 +137,5 @@ input:focus {
 
 .title {
   margin-bottom: 30px;
-} 
+}
 </style>
